@@ -19,14 +19,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # UPDATED: Uses the new action and completely disables caching
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
       with:
         cache-disabled: true
-
-    - name: Grant execute permission for gradlew (if exists)
-      run: chmod +x gradlew || true
+        gradle-version: '8.6' # Forces the server to use the compatible compiler
 
     - name: Build Debug APK
       run: gradle assembleDebug --no-daemon
