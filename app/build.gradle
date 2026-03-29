@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    // Added explicit version numbers here
+    id 'com.android.application' version '8.2.2'
+    id 'org.jetbrains.kotlin.android' version '1.9.22'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.volumestabilizer"
-        minSdk 23  // Perfect for older Firesticks
+        minSdk 23
         targetSdk 34
         versionCode 1
         versionName "1.0"
